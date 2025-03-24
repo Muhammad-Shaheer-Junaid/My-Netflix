@@ -53,6 +53,3 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 * Muhammad Shaheer Junaid - [Muhammad-Shaheer-Junaid](https://github.com/Muhammad-Shaheer-Junaid)
 
-## License
-
-This project is open-source and available under the [MIT License](LICENSE). (If you have a license file, add this line. If not, you can remove it.)
