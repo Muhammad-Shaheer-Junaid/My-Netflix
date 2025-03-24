@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.border {
+    border: 5px solid #333;
+    margin: 1px 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* <!---------------------- MAIN HEADER ----------------------> */
+.main-header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Assets/Images/header-image.png");
+    /* border-bottom: 6px solid #333; */
+    background-size: cover;
+    padding: 10px 10%;
+    position: relative;
+}
+
+/* <!------------ NAVBAR ------------> */
+.navbar {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+.btn {
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav button {
+    padding: 7px 10px;
+    margin-left: 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 2px;
+    font-size: 15px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: rgb(220, 0, 0);
+    border: 1px solid rgb(220, 0, 0);
+    /* border: 2px solid rgb(220, 0, 0); */
+}
+
+.lang-btn {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.lang-btn:hover {
+    background-color: transparent;
+    color: rgb(205, 205, 205);
+    border: 1px solid rgb(205, 205, 205);
+}
+
+/* <!------------ HEADER CONTENT ------------> */
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* max-width: 600px; */
+    color: white;
+}
+
+.header-content h1 {
+    font-size: 60px;
+    font-weight: 600;
+    margin: 5px;
+    line-height: 70px;
+    max-width: 650px;
+}
+
+.header-content h3 {
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.header-content h6 {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 5px;
+}
+
+/* <!------------ FORM ------------> */
+.header-content form {
+    display: flex;
+    align-items: center;
+}
+
+.email-signup {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.form-input {
+    flex: 1;
+    /* width: 500px; */
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 5px 0px 0px 5px;
+    outline: none;
+    margin: 10px 0px;
+}
+
+.form-button {
+    width: 150px;
+    padding: 15px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 0px 5px 5px 0px;
+    margin: 10px 0px;
+    outline: none;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: rgb(220, 0, 0);
+    border: 1px solid rgb(220, 0, 0);
+}
+
+/* <!---------------------- FEATURES ----------------------> */
+.features {
+    padding: 50px 15%;
+    font-size: 22px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    padding: 50px 10px;
+}
+
+.text-col {
+    flex-basis: 45%;
+    margin: 0 25px;
+    margin-bottom: 20px;
+}
+
+
+.img-col {
+    flex-basis: 45%;
+    margin: 0 25px;
+    margin-bottom: 20px;
+}
+
+.img-col img {
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+
+.text-col h1 {
+    margin: 20px 0;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.text-col h6 {
+    margin: 20px 0;
+}
+
+/* <!---------------------- FAQS ----------------------> */
+.faq {
+    padding: 10px 14%;
+    text-align: center;
+    font-size: 18px;
+    border-top: 6px solid #333;
+}
+
+.faq h1 {
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.accordion {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 2px 0;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #303030;
+    position: relative;
+    cursor: pointer;
+    /* border-radius: 5px; */
+}
+
+label::after {
+    content: "+";
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s ease;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.accordion .content {
+    display: flex;
+    text-align: left;
+    max-height: 0;
+    padding: 0 20px;
+    overflow: hidden;
+    /* border-radius: 0px 0px 5px 5px; */
+    background-color: #303030;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.content h6 {
+    font-size: 16px;
+    font-weight: 200;
+    /* line-height: 20px; */
+}
+
+.accordion input[type="checkbox"]:checked+label+.content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.accordion input[type="checkbox"]:checked+label::after {
+    transform: rotate(315deg);
+    transition: transform 0.5s ease;
+
+    /* content: "+";
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transform: rotate(135deg);
+    transition: transform 0.5s; */
+}
+
+.faq .email-signup {
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+.faq small {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 5px;
+}
+
+/* <!---------------------- FOOTER ----------------------> */
+.footer {
+    padding: 50px 15% 10px;
+    /* border-top: 6px solid #333; */
+    color: #777;
+}
+
+.footer h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.footer .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a {
+    text-decoration: none;
+    display: block;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer .col a:hover {
+    color: rgb(205, 205, 205);
+}
+
+.footer .row {
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.footer .lang-btn {
+    padding: 7px 12px;
+    /* margin-left: 10px; */
+    /* border: 0;
+    outline: 0; */
+    border-radius: 2px;
+    font-size: 15px;
+    color: #777;
+    background-color: transparent;
+    border: 1px solid #777;
+    cursor: pointer;
+}
+
+.footer .lang-btn:hover {
+    background-color: transparent;
+    color: rgb(205, 205, 205);
+    border: 1px solid rgb(205, 205, 205);
+}
+
+.Copyright {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer .copyright-txt {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+/* <!---------------------- MEDIA QUERIES ----------------------> */
+@media (max-width: 768px) {
+    .logo {
+        width: 100px;
+        height: fit-content;
+        margin: auto 0;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        padding: 15px 6%;
+    }
+
+    .btn {
+        /* flex-direction: column; */
+        align-items: flex-end;
+    }
+
+    nav button {
+        padding: 5px 8px;
+        margin: 5px 2px;
+        font-size: 12px;
+    }
+
+    .lang-btn {
+        padding: 5px 7px;
+        margin: 5px 2px;
+        font-size: 12px;
+    }
+
+    .header-content {
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+
+    .header-content h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .email-signup {
+        /* margin-left: 100px;
+        margin-right: 100px; */
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .form-input {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .form-button {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .text-col,
+    .img-col {
+        flex-basis: 100%;
+    }
+
+    .text-col h1 {
+        font-size: 30px;
+    }
+
+    .text-col h6 {
+        font-size: 15px;
+    }
+
+    .row:nth-child(2),
+    .row:nth-child(4) {
+        flex-direction: column-reverse;
+    }
+
+    .faq h1 {
+        font-size: 30px;
+    }
+
+    .accordion li label {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .content h6 {
+        font-size: 15px;
+    }
+
+    label::after {
+        font-size: 30px;
+    }
+}
