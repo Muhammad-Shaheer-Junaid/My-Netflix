@@ -18,6 +18,10 @@ This project aims to replicate the core user interface of Netflix, focusing on r
 * HTML5
 * CSS3
 
+## Live Demo
+
+[Live Demo](https://net-cl-099.netlify.app/)
+
 ## Installation
 
 1.  Clone the repository:
